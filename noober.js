@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   let pickupZip = ride.pickupLocation.zip
   let purpleRequested = ride.purpleRequested
 
+  // Use conditional logic to display level of service
   let serviceLevel
   if (purpleRequested == true) {
     serviceLevel = 'Noober Purple'
@@ -37,16 +38,11 @@ document.addEventListener('DOMContentLoaded', async function() {
     serviceLevel = 'Noober X'
   }
 
+  //Create a sentence that displays the data in the random ride Object
   let sentence = `${serviceLevel} Passenger: ${passengerFirstName} ${passengerLastName} - ${passengerPhoneNumber}. Pickup at ${pickupAddress}, ${pickupCity}, ${pickupState} ${pickupZip}. Drop-off at ${dropoffAddress}, ${dropoffCity}, ${dropoffState} ${dropoffZip}.`
+
+  // Write the sentence to the JavaScript console
   console.log(sentence) 
-
-
-
-  // Write the data in the random ride Object to the JavaScript console
-  // Use conditional logic to display level of service
-  // 
-  //Noober X Passenger: Kiley Thompson - (260) 908-6886. Pickup at 1301 N State Pkwy, Chicago, IL 60624. Drop-off at 2362 N Clybourn Ave, Chicago, IL 60657.
-
 
   // 🔥 YOUR CODE ENDS HERE 🔥
 })
